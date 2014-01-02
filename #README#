@@ -1,0 +1,9 @@
+This software is by David Medine. It is totally free, totally useless, or useful. There is no warranty and  no license.
+
+This is a C library for doing matrix stuff that you need for openGL programs. It emulates the most commonly used functionality of GLM, which is in C++. The functions it has are rotate, translate, lookAt and perspective.
+
+This is so small, I decided not to make a static library out of it. Build the example program (which is a C version of the C++ tutorial on openGL that you can find here: http://en.wikibooks.org/wiki/OpenGL_Programming/Modern_OpenGL_Tutorial_05) by typing :
+
+make PROG=cube
+
+If you have openGL and GSL installed, it should work just fine. Now just include the path the the gsl_utilities.h in your C programs and you should be good to go. 
