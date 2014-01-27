@@ -1,18 +1,28 @@
+#gslu/Makefile
+
 CC=gcc
 
-SRCS=$(PROG).c
-SRCS+=shader_utils.c gsl_utils.c
+SRCS=cube.c
+SRCS+=shader_utils.c 
 OBJS=$(SRCS:.c=.o) 
 
-LIBS=-lglut -lGLEW -lGL -lm -lgsl
-LIBPATH=-L/usr/local/ -Llib -L/lib64
+CFLAGS=-I./lib
 
-all: $(PROG)
+LIBS=-lglut -lGLEW -lGL -lm -lgsl -lgslu
+LIBPATH=-L/usr/local/ -L/lib -L/lib64 -L./
 
-$(PROG): $(OBJS)
-	$(CC) -g -o $@ $^ $(LIBPATH) $(LIBS)
+.PHONY: lib cube
+
+all: lib cube
+
+lib:
+	$(MAKE) -C lib
+
+cube: $(OBJS)
+	$(CC) -g -o $@ $^ $(CFLAGS) $(LIBPATH) $(LIBS)
 
 clean:
-	rm -f *.o $(PROG)
+	rm -f *.o 
+	rm  gslu/libgslu.a
 
-.PHONY: all clean $(PROG)
+

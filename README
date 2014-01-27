@@ -1,4 +1,4 @@
-This software is by David Medine. It is totally free, totally useless, or useful. There is no warranty and no license.
+This software is by David Medine. It is totally free, totally useless, or useful. There is no warranty and  no license.
 
 This is a C library for doing matrix stuff that you need for openGL programs. It emulates the most commonly used functionality of GLM, which is in C++. The functions it has are rotate, translate, lookAt and perspective.
 
