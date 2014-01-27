@@ -22,7 +22,7 @@ all: libgslu.a
 libgslu.a: $(OBJ) 
 	$(AR) -r $@ $(OBJ) 
 	#mv *.o $(OBJ_PATH)
-	mv libgslu.a ../
+	#mv libgslu.a ../
 clean:
 	rm *.o
-	rm ../libgslu.a
+	rm libgslu.a

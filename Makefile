@@ -9,7 +9,7 @@ OBJS=$(SRCS:.c=.o)
 CFLAGS=-I./lib
 
 LIBS=-lglut -lGLEW -lGL -lm -lgsl -lgslu
-LIBPATH=-L/usr/local/ -L/lib -L/lib64 -L./
+LIBPATH=-L/usr/local/ -L/lib -L/lib64 -L./lib
 
 .PHONY: lib cube
 
