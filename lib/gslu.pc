@@ -1,0 +1,10 @@
+prefix=/usr/local
+exec_prefix=${prefix}
+includedir=${prefix}/include
+libdir=${exec_prefix}/lib
+
+Name: gslu
+Description: The gslu library
+Version:
+Cflags: -I${includedir}/GSLU
+Libs: -L${libdir} -lgslu
