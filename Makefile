@@ -25,4 +25,8 @@ clean:
 	rm -f *.o 
 	rm  gslu/libgslu.a
 
-
+install: 
+	mkdir -p /usr/local/include/GSLU
+	cp lib/gsl_utils.h /usr/local/include/GSLU/gsl_utils.h
+	cp lib/libgslu.a /usr/local/lib/libgslu.a
+	cp lib/gslu.pc /usr/share/pkgconfig/gslu.pc
